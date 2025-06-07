@@ -29,7 +29,13 @@ pub fn run() {
         .plugin(tauri_plugin_fs::init())
         .plugin(tauri_plugin_cli::init());
 
-    builder = builder.invoke_handler(commands_builder.invoke_handler());
+    builder = builder
+        .invoke_handler(commands_builder.invoke_handler())
+        .setup(|app| {
+            boot::tray::create_tray(app.handle())?;
+
+            Ok(())
+        });
 
     builder
         .plugin(boot::layer_shell::init())

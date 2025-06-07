@@ -16,7 +16,7 @@ unsafe impl Send for ShellState {}
 pub fn init<R: Runtime>() -> TauriPlugin<R> {
     PluginBuilder::new("lux|boot:layer_shell")
         .on_webview_ready(|window| {
-            const DEBUG: bool = false;
+            const DEBUG: bool = true;
             let app = window.app_handle();
 
             let main_window = app
