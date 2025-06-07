@@ -1,0 +1,15 @@
+{
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    "rust-analyzer.linkedProjects": [
+        "./apps/desktop/src-tauri/Cargo.toml"
+    ],
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true
+    }
+}

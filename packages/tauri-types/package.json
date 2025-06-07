@@ -1,0 +1,10 @@
+{
+    "name": "@lux/tauri-types",
+    "type": "module",
+    "exports": {
+        ".": {
+            "types": "./src/bindings.ts",
+            "default": "./src/bindings.ts"
+        }
+    }
+}

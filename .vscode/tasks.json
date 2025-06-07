@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ui:dev",
+            "type": "shell",
+            "isBackground": true,
+            "problemMatcher": [],
+            "command": "bun",
+            "args": [
+                "run",
+                "-F",
+                "./apps/desktop",
+                "dev"
+            ]
+        },
+        {
+            "label": "ui:build",
+            "type": "shell",
+            "isBackground": true,
+            "problemMatcher": [],
+            "command": "bun",
+            "args": [
+                "run",
+                "-F",
+                "./apps/desktop",
+                "build"
+            ]
+        }
+    ]
+}

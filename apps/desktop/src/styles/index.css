@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+#app {
+    min-height: 100vh;
+    position: absolute;
+    inset: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
