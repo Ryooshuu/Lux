@@ -15,7 +15,7 @@ export default defineConfig({
         vue(),
         unfonts({
             google: {
-                families: ["Noto sans"]
+                families: ["Noto Sans"]
             }
         }),
         autoImport({

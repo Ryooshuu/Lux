@@ -10,6 +10,9 @@ async fixTransparency(dir: number) : Promise<void> {
 },
 async exitApp() : Promise<void> {
     await TAURI_INVOKE("exit_app");
+},
+async toggleVisibility(visibleState: boolean) : Promise<void> {
+    await TAURI_INVOKE("toggle_visibility", { visibleState });
 }
 }
 

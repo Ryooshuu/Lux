@@ -8,7 +8,7 @@ import FluidContainer from "./FluidContainer.vue";
 
 <template>
     <motion.div
-        class="bg-[rgba(26,26,26,0.8)] border-2 border-[rgb(26,26,26)] overflow-hidden rounded-[10px]"
+        class="bordered-bg overflow-hidden"
         :initial="{ opacity: 0, height: 0, scale: 0.99 }"
         :exit="{ opacity: 0, height: 0, scale: 0.99 }"
         :animate="{ opacity: 1, height: 'auto', scale: 1 }"
@@ -19,3 +19,15 @@ import FluidContainer from "./FluidContainer.vue";
         </FluidContainer>
     </motion.div>
 </template>
+
+<style>
+.bordered-bg {
+    /* background: hsla(0, 0%, 5%, 80%);
+    border: solid 2px hsl(0, 0%, 10%);
+    border-radius: 10px; */
+
+    background: hsla(0, 0%, 95%, 80%);
+    border: solid 2px hsl(0, 0%, 100%);
+    border-radius: 10px;
+}
+</style>

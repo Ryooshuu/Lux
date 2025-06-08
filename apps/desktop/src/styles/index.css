@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+html, body {
+    font-family: "Inter";
+    text-rendering: optimizeLegibility;
+    color: hsl(0 , 0%, 90%);
+}
+
+html, body {
+    color: hsl(0, 0%, 5%);
+}
+
 #app {
     min-height: 100vh;
     position: absolute;

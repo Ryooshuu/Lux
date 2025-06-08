@@ -3,8 +3,8 @@ use std::sync::Mutex;
 use gtk::traits::{GtkWindowExt, WidgetExt};
 use tauri::{
     menu::{Menu, MenuItem},
-    tray::{TrayIconBuilder},
-    Manager, Runtime, State
+    tray::TrayIconBuilder,
+    Manager, Runtime, State,
 };
 
 use crate::boot::layer_shell::ShellState;
@@ -35,12 +35,8 @@ pub fn create_tray<R: Runtime>(app: &tauri::AppHandle<R>) -> tauri::Result<()> {
         .icon(app.default_window_icon().unwrap().clone())
         .menu(&menu1)
         .on_menu_event(|app, event| match event.id.as_ref() {
-            "toggle" => {
-                toggle_main_window(app);
-            }
-            "quit" => {
-                app.exit(0)
-            }
+            "toggle" => toggle_main_window(app),
+            "quit" => app.exit(0),
             _ => {
                 log::warn!("unknown menu event: {:?}", event.id);
             }

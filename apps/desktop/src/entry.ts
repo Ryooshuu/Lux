@@ -4,7 +4,6 @@ import { warn, debug, trace, info, error } from "@tauri-apps/plugin-log";
 
 import App from "./App.vue";
 import "./styles/index.css";
-import "unfonts.css";
 
 // #region console forwarding
 function forwardConsole(
@@ -35,15 +34,9 @@ async function fixthisbullshittransparencyissue() {
 
 setInterval(() => {
     fixthisbullshittransparencyissue();
-}, 1);
+}, 0.01);
 
 // #endregion
 
 createApp(App)
     .mount("#app");
-
-document.addEventListener("keydown", async (e) => {
-    if (e.key === "Escape") {
-        await commands.exitApp();
-    }
-});
