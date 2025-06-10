@@ -45,7 +45,6 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
 
             // i'm fucking tired of this shit
             gtk_window.set_size_request(1920, 1080);
-            gtk_window.fullscreen();
 
             let gdk_screen = GtkWindowExt::screen(&gtk_window).unwrap();
             let rgba_visual = gdk_screen.rgba_visual();

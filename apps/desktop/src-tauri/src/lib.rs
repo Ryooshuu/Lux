@@ -1,9 +1,9 @@
 use std::sync::Mutex;
 
+use gtk::traits::WidgetExt;
 use specta_typescript::Typescript;
-use tauri::{State, Manager, Emitter};
+use tauri::{Emitter, Manager, State};
 use tauri_specta::{collect_commands, Builder as SpectaBuilder};
-use gtk::traits::{WidgetExt};
 
 use crate::boot::layer_shell::ShellState;
 
@@ -47,7 +47,8 @@ pub fn run() {
 
                 app.emit("app_shown", ()).unwrap();
             }
-        }));use gtk::traits::GtkWindowExt;
+        }));
+    use gtk::traits::GtkWindowExt;
 
     builder = builder
         .invoke_handler(commands_builder.invoke_handler())
